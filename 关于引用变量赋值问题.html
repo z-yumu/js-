@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    const val = {num:'9527'}
+
+    // val和obj存的都是地址值，指向{num:'9527'}
+    function fn(obj){
+        // 这里obj指向 {txt:'996'}
+        obj = {txt:'996'}
+    }
+
+    // obj = val
+    fn(val)
+
+    // val没有变
+    console.log(val) // {num:'9527'}
+
+    // 在js调用函数时传递变量参数时，是值传递
+</script>
+</html>

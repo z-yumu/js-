@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+/** 
+ * 1.函数的prototype属性(
+ * 每个函数都有一个prototype属性，它默认指向一个空Object实例对象(原型对象) Object函数不满足
+ * 原型对象中有一个属性constructor(构造函数),它指向函数对象  console.log(Date.prototype.constructor === Date,'Date')
+ * 2.给原型对象添加属性(一般都是方法)
+ * 作用:函数的所有实例对象自动拥有原型中的属性(方法)
+*/
+
+
+console.log(Date.prototype,'prototype')
+
+
+
+function Fn(){} // prototype的出现是为了解决在传统代码中,我们每创建一个对象实例,每个实例都会有重复的方法,这样在创建数量较多的对象实例时,代码冗余,占用内存多。
+
+console.log(fun.prototype) // 默认指向一个Object空对象(没有属性)
+
+Fn.prototype.test = ()=>{
+    console.log('9527')
+}
+
+console.log(Fn.prototype)
+
+const f = new Fn() 
+
+
+
+
+
+
+</script>
+</html>
