@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+/** 
+ * 1.代码分类
+ *  全局代码
+ *  函数（局部）代码
+ * 2.全局执行上下文
+ *  在执行全局代码前将window确定为全局执行上下文
+ *  对全局数据进行预处理
+ *  var定义的全局变量==》undefined，添加window的属性
+ *  function声明的全局函数赋值（fun），添加为window方法
+ *  this==》赋值（window）
+ *开始执行全局代码
+ * 3.函数执行上下文
+ *  在调用函数，准备执行函数体之前，创建对应的函数执行上下文对象
+ *  对局部数据进行预处理
+ *  形参变量==》赋值（实参）==》添加为执行上下文的属性
+ *  arguments==》赋值（实参列表），添加为执行执行上下文属性
+ *  var定义的全局变量==》undefined，添加为执行上下文的属性
+ *  function声明的函数==》赋值（fun），执行上下文的方法
+ *  this==>(调用函数的对象) | this确认是看调用的对象，箭头函数this是看定义的时候父级作用域
+ *开始执行函数体代码
+ * 
+*/
+
+
+// 全局执行上下文
+console.log(a1,window.a1)
+window.a2()
+console.log(a2)
+console.log(this)
+
+var a1 = null
+
+function a2(){}
+
+// 函数执行上下文
+
+function fn(a1){
+    console.log(a1)
+    console.log(a2)
+    console.log(this)
+    console.log(arguments)
+
+    var a2 = null
+
+    function a3(){
+        console.log('a3')
+    }
+}
+
+
+
+
+
+
+
+
+</script>
+</html>

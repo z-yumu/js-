@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+/** 
+ * 1.变量声明提升
+ * 通过var定义(声明)的变量,在定义够之前就可以访问到值:undefined
+ * 2.函数声明提升
+ * 通过function声明的函数,在之前就可以直接调用值:函数定义(对象) | 声明的方式,表达式不可以 const fn = ()=>{}不行
+ * 
+*/
+
+var a = 3 
+fn() // 函数提升
+function fn(){
+    // undefined
+    // var a 
+    console.log(a)
+    var a = 4
+}
+
+
+</script>
+</html>
